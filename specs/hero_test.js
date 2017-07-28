@@ -13,4 +13,8 @@ describe ("Hero Test", function(){
     assert.equal("Frozen Yogurt",hero.faveFood);
     assert.equal("Eat dirt insuffarble space anomaly",hero.talk);
   });
+
+  it("Hero should have a full starting health of 100",function(){
+    assert.equal(100,hero.health);
+  });
 });
