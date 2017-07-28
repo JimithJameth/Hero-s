@@ -17,4 +17,8 @@ describe ("Hero Test", function(){
   it("Hero should have a full starting health of 100",function(){
     assert.equal(100,hero.health);
   });
+
+  it("Hero should have an empty array of tasks", function(){
+    assert.equal(0, hero.tasks.length);
+  });
 });
