@@ -1,11 +1,12 @@
 var assert = require('assert');
-var Hero = require('../hero.js');
-var Food = require('../food.js');
-
+var Hero = require('../hero');
+var Food = require('../food');
+var Task = require('../task')
 describe ("Hero Test", function(){
 
   beforeEach(function(){
     hero = new Hero({ name : "Earthworm-Jim", faveFood: "Frozen Yogurt", talk: "Eat dirt insuffarble space anomaly!!!"});
+    level1 = new Task ({ level: 1, difficulty: 1, urgency: 1,})
   });
 
   it("Hero should have a name favefood and be able to talk",function(){
@@ -24,5 +25,10 @@ describe ("Hero Test", function(){
 
   it("Hero should be able to say there name and talk",function(){
     assert.equal("I am Earthworm-Jim. Eat dirt insuffarble space anomaly!!!", hero.speak());
+  });
+
+  it("Hero should have a task to do",function(){
+    hero.addTask(level1);
+    assert.equal(1,hero.tasks.length);
   });
 });

@@ -11,6 +11,10 @@ var Hero = function(params){
 Hero.prototype = {
   speak: function(){
     return "I am " + this.name +". " + this.talk;
+  },
+
+  addTask: function(task){
+    this.tasks.push(task)
   }
 }
 
