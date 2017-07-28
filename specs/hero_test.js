@@ -10,7 +10,7 @@ describe ("Hero Test", function(){
 
   it("Hero should have a name favefood and be able to talk",function(){
     assert.equal("Earthworm-Jim",hero.name);
-    assert.equal("Frozen Yogurt",hero.favefood);
+    assert.equal("Frozen Yogurt",hero.faveFood);
     assert.equal("Eat dirt insuffarble space anomaly",hero.talk);
   });
 });
