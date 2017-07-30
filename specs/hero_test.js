@@ -12,7 +12,7 @@ describe ("Hero Test", function(){
     level1 = new Task ({ level: 1, difficulty: 1, urgency: 1,completed: false,reward:1000})
     level7 = new Task ({ level: 7, difficulty: 6, urgency: 3,completed:  true,reward:3000})
     level8 = new Task ({ level: 8, difficulty: 5, urgency: 4,completed:  true,reward:4000})
-    level9 = new Task ({ level:  9, difficulty:10, urgency: 5,completed:  true,reward:6000})
+    level9 = new Task ({ level: 9, difficulty: 10,urgency: 5,completed:  true,reward:6000})
     level3 = new Task ({ level: 3, difficulty: 4, urgency: 2,completed: false,reward:1500})
   });
 
