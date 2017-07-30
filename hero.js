@@ -1,7 +1,7 @@
 var _ = require("lodash")
 var Hero = function(params){
 
-  this.name = params.name;
+ this.name = params.name;
   this.faveFood = params.faveFood;
   this.talk = params.talk;
   this.health = 100;
@@ -14,7 +14,7 @@ Hero.prototype = {
     return "I am " + this.name +". " + this.talk;
   },
 
-  eat: function(food){
+ eat: function(food){
     hero.stomach.push(food);
     this.health += food.healthIncrease
   },
@@ -24,38 +24,31 @@ Hero.prototype = {
       this.health =+ food.healthIncrease * 1.5
   },
 
-  addTask: function(task){
+ addTask: function(task){
     this.tasks.push(task)
   },
 
-  numberOfTasks: function(){
-   return this.tasks.length;
+ completedTasks: function(status){
+    var newTasks = [];
+    for (task of this.tasks){
+      if (task.completed === status){
+        newTasks.push(task);
+      }
+    }
+    return newTasks;
   },
 
-  sortedTasks: function(type){
+ numberOfTasks: function(){
+   return this.tasks.length;
+ },
+
+sortedTasks: function(type){
   this.tasks.sort(function(a,b){
     return a[type] - b[type];
   });
 }
 
-completedTasks: function(status){
-  var newTasks = [];
-  for (task of this.tasks){
-    if (task.completed === status){
-      newTasks.push(task);
-    }
-  }
-  return newTasks;
-  },
+
 }
-
-
-  
-  
-
-
-
-    
-
 
 module.exports = Hero;
