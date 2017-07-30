@@ -64,15 +64,12 @@ describe ("Hero Test", function(){
       assert.deepEqual(hero.tasks,[level9,level7,level3]);
   });
 
-  // it("Hero can sort tasks by reward",function(){
-  //   hero.addTask(level7);
-  //   level7.completeTask;
-  //   hero.addTask(level3);
-  //   level3.completeTask;
-  //   hero.addTask(level10);
-  //   level10.completeTask;
-  //   hero.sortedTasks("reward");
-  //   assert.equal(hero.tasks,[level10,level7,level3]);
-  // });
+  it("Hero can sort tasks by reward",function(){
+    hero.addTask(level7);
+    hero.addTask(level3);
+    hero.addTask(level9);
+    hero.sortedTasks("reward");
+    assert.deepEqual(hero.tasks,[level9,level7,level3]);
+  });
 });
 
