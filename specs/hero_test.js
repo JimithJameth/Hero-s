@@ -48,5 +48,13 @@ describe ("Hero Test", function(){
     hero.eat(food1);
     assert.equal(120,hero.health)
   });
+
+  it("Hero can sort tasks by difficulty",function(){
+    hero.addTask(level7);
+    hero.addTask(level3);
+    hero.addTask(level10);
+    hero.sortTasks("difficulty");
+    assert.equal(hero.tasks,[level10,level7,level3]);
+  });
 });
   

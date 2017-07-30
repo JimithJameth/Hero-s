@@ -27,7 +27,32 @@ Hero.prototype = {
   addTask: function(task){
     this.tasks.push(task)
   },
+
+  numberOfTasks: function(){
+   return this.tasks.length;
+  },
+
+  sortedTasks: function(type){
+  this.tasks.sort(function(a,b){
+    return a[type] - b[type];
+  });
 }
+
+completedTasks: function(status){
+  var newTasks = [];
+  for (task of this.tasks){
+    if (task.completed === status){
+      newTasks.push(task);
+    }
+  }
+  return newTasks;
+  },
+}
+
+
+  
+  
+
 
 
     

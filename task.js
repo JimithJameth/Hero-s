@@ -11,12 +11,6 @@ Task.prototype = {
     this.completed = true;
   },
 
-  sortLevel: function(){
-    return _.sortBy(this.tasks, [function(task){
-    return task.level;
-    }]);
-  },
-  
 
 };
 
