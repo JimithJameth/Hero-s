@@ -5,7 +5,7 @@ describe ("Task",function(){
   var task;
 
   beforeEach(function(){
-    level9 = new Task ({ level: 9, difficulty: 10,urgency: 5,completed:  true,reward:6000})
+    level9 = new Task ({ level: 9, difficulty: 10,urgency: 5,completed:false,reward:6000})
   });
 
 it("task should have a difficulty level", function() {
@@ -18,6 +18,10 @@ it("task should have a urgency level",function(){
 
 it("task should have a reward",function(){
   assert.deepEqual(level9.reward,6000);
+  });
+
+it("task should start not complete",function(){
+  assert.deepEqual(level9.completed,false)
   });
 });
 
