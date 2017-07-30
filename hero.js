@@ -14,10 +14,6 @@ Hero.prototype = {
     return "I am " + this.name +". " + this.talk;
   },
 
-  addTask: function(task){
-    this.tasks.push(task)
-  },
-
   eat: function(food){
     hero.stomach.push(food);
     this.health += food.healthIncrease
@@ -26,10 +22,12 @@ Hero.prototype = {
     hero.stomach.push(food);
     if(food.name === faveFood)
       this.health =+ food.healthIncrease * 1.5
-
   }
-  
+
+  addTask: function(task){
+    this.tasks.push(task)
   },
+}
 
 
     
