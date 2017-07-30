@@ -22,7 +22,7 @@ Hero.prototype = {
     hero.stomach.push(food);
     if(food.name === faveFood)
       this.health =+ food.healthIncrease * 1.5
-  }
+  },
 
   addTask: function(task){
     this.tasks.push(task)
