@@ -6,6 +6,7 @@ var Hero = function(params){
   this.talk = params.talk;
   this.health = 100;
   this.tasks = [];
+  this.stomach = [];
 }
 
 Hero.prototype = {
@@ -15,7 +16,17 @@ Hero.prototype = {
 
   addTask: function(task){
     this.tasks.push(task)
+  },
+
+  eat: function(food){
+    hero.stomach.push(food);
+    this.health += food.healthIncrease
   }
-}
+
+
+  }
+
+    
+
 
 module.exports = Hero;
