@@ -53,16 +53,16 @@ describe ("Hero Test", function(){
     hero.addTask(level9);
     hero.addTask(level7);
     hero.sortedTasks("difficulty");
-    assert.equal(hero.tasks,[level9,level7,]);
+    assert.deepEqual(hero.tasks,[level9,level7,]);
   });
 
-  // it("Hero can sort tasks by urgency",function(){
-  //     hero.addTask(level7);
-  //     hero.addTask(level3);
-  //     hero.addTask(level10);
-  //     hero.sortedTasks("urgency");
-  //     assert.equal(hero.tasks,[level10,level7,level3]);
-  // });
+  it("Hero can sort tasks by urgency",function(){
+      hero.addTask(level7);
+      hero.addTask(level3);
+      hero.addTask(level9);
+      hero.sortedTasks("urgency");
+      assert.deepEqual(hero.tasks,[level9,level7,level3]);
+  });
 
   // it("Hero can sort tasks by reward",function(){
   //   hero.addTask(level7);

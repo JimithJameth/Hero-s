@@ -44,7 +44,7 @@ Hero.prototype = {
 
  sortedTasks: function(type){
   this.tasks.sort(function(a,b){
-    return a[type] - b[type];
+    return b[type] - a[type];
   });
 }
 
