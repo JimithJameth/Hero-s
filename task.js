@@ -7,7 +7,7 @@ var Task = function(params){
 };
 
 Task.prototype = {
-  competeTask: function(){
+  completeTask: function(){
     this.completed = true;
   },
 

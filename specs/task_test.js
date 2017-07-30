@@ -21,7 +21,12 @@ it("task should have a reward",function(){
   });
 
 it("task should start not complete",function(){
-  assert.deepEqual(level9.completed,false)
+  assert.deepEqual(level9.completed,false);
   });
+
+it("task should be able to be complete",function(){
+  level9.completeTask();
+  assert.deepEqual(level9.completed,true);
+});
 });
 
