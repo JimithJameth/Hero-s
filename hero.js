@@ -21,10 +21,16 @@ Hero.prototype = {
   eat: function(food){
     hero.stomach.push(food);
     this.health += food.healthIncrease
-  }
+  },
+  eatFaveFood: function(food){
+    hero.stomach.push(food);
+    if(food.name === faveFood)
+      this.health =+ food.healthIncrease * 1.5
 
-
   }
+  
+  },
+
 
     
 
