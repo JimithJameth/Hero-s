@@ -43,5 +43,10 @@ describe ("Hero Test", function(){
     hero.eat(food2);
     assert.equal(102,hero.health)
   });
+
+  it("Hero's health should go up by fave food health increase",function(){
+    hero.eat(food1);
+    assert.equal(120,hero.health)
+  });
 });
   
